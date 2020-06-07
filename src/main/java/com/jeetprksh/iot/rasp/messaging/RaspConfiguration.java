@@ -5,64 +5,64 @@ package com.jeetprksh.iot.rasp.messaging;
  */
 public class RaspConfiguration {
 
-    private String serverAddress;
-    private String serverPort;
-    private String brokerAddress;
-    private String brokerPort;
-    private String brokerProtocol;
-    private String brokerTopic;
+  private String serverAddress;
+  private String serverPort;
+  private String brokerAddress;
+  private String brokerPort;
+  private String brokerProtocol;
+  private String brokerTopic;
 
-    public String getServerAddress() {
-        return serverAddress;
-    }
+  public String getServerAddress() {
+    return serverAddress;
+  }
 
-    public RaspConfiguration setServerAddress(String serverAddress) {
-        this.serverAddress = serverAddress;
-        return this;
-    }
+  public RaspConfiguration setServerAddress(String serverAddress) {
+    this.serverAddress = serverAddress;
+    return this;
+  }
 
-    public String getServerPort() {
-        return serverPort;
-    }
+  public String getServerPort() {
+    return serverPort;
+  }
 
-    public RaspConfiguration setServerPort(String serverPort) {
-        this.serverPort = serverPort;
-        return this;
-    }
+  public RaspConfiguration setServerPort(String serverPort) {
+    this.serverPort = serverPort;
+    return this;
+  }
 
-    public String getBrokerAddress() {
-        return brokerAddress;
-    }
+  public String getBrokerAddress() {
+    return brokerAddress;
+  }
 
-    public RaspConfiguration setBrokerAddress(String brokerAddress) {
-        this.brokerAddress = brokerAddress;
-        return this;
-    }
+  public RaspConfiguration setBrokerAddress(String brokerAddress) {
+    this.brokerAddress = brokerAddress;
+    return this;
+  }
 
-    public String getBrokerPort() {
-        return brokerPort;
-    }
+  public String getBrokerPort() {
+    return brokerPort;
+  }
 
-    public RaspConfiguration setBrokerPort(String brokerPort) {
-        this.brokerPort = brokerPort;
-        return this;
-    }
+  public RaspConfiguration setBrokerPort(String brokerPort) {
+    this.brokerPort = brokerPort;
+    return this;
+  }
 
-    public String getBrokerProtocol() {
-        return brokerProtocol;
-    }
+  public String getBrokerProtocol() {
+    return brokerProtocol;
+  }
 
-    public RaspConfiguration setBrokerProtocol(String brokerProtocol) {
-        this.brokerProtocol = brokerProtocol;
-        return this;
-    }
+  public RaspConfiguration setBrokerProtocol(String brokerProtocol) {
+    this.brokerProtocol = brokerProtocol;
+    return this;
+  }
 
-    public String getBrokerTopic() {
-        return brokerTopic;
-    }
+  public String getBrokerTopic() {
+    return brokerTopic;
+  }
 
-    public RaspConfiguration setBrokerTopic(String brokerTopic) {
-        this.brokerTopic = brokerTopic;
-        return this;
-    }
+  public RaspConfiguration setBrokerTopic(String brokerTopic) {
+    this.brokerTopic = brokerTopic;
+    return this;
+  }
 }

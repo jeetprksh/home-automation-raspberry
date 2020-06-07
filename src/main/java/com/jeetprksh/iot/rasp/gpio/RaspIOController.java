@@ -9,26 +9,26 @@ import java.util.logging.Logger;
  */
 public class RaspIOController {
 
-    private static final Logger logger = Logger.getLogger(RaspIOController.class.getName());
+  private final Logger logger = Logger.getLogger(RaspIOController.class.getName());
 
-    private final GpioController gpio;
-    private final GpioPinDigitalOutput pin;
+  private final GpioController gpio;
+  private final GpioPinDigitalOutput pin;
 
-    public RaspIOController() {
-        this.gpio = GpioFactory.getInstance();
-        this.pin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_01, "OfficeLights", PinState.HIGH);
-        pin.setShutdownOptions(true, PinState.LOW);
-    }
+  public RaspIOController() {
+    this.gpio = GpioFactory.getInstance();
+    this.pin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_01, "OfficeLights", PinState.HIGH);
+    this.pin.setShutdownOptions(true, PinState.LOW);
+  }
 
-    public void pinOn() {
-        this.pin.high();
-    }
+  public void pinOn() {
+    this.pin.high();
+  }
 
-    public void pinOff() {
-        this.pin.low();
-    }
+  public void pinOff() {
+    this.pin.low();
+  }
 
-    public void pinShutdown() {
-        this.gpio.shutdown();
-    }
+  public void pinShutdown() {
+    this.gpio.shutdown();
+  }
 }

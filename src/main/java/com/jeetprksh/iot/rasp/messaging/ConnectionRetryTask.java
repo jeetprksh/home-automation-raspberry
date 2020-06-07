@@ -4,31 +4,31 @@ import java.util.logging.Logger;
 
 public class ConnectionRetryTask implements Runnable {
 
-    private static final Logger logger = Logger.getLogger(ConnectionRetryTask.class.getName());
+  private final Logger logger = Logger.getLogger(ConnectionRetryTask.class.getName());
 
-    RaspMessageClient messageClient;
+  private final RaspMessageClient messageClient;
 
-    ConnectionRetryTask(RaspMessageClient messageClient) {
-        this.messageClient = messageClient;
-    }
+  ConnectionRetryTask(RaspMessageClient messageClient) {
+    this.messageClient = messageClient;
+  }
 
-    public void run() {
-        for(int i = 0;  ; i++) {
-            if (!messageClient.isConnected()) {
-                this.logger.info("Try connection attempt " + i);
-                try {
-                    Thread.sleep(7000);
-                    messageClient.connect();
-                    messageClient.setMessageCallback();
-                    messageClient.subscribe();
-                } catch (Exception e) {
-                    this.logger.severe(e.toString());
-                }
-            } else {
-                this.logger.info("Connected on retry " + i);
-                break;
-            }
+  public void run() {
+    for (int i = 0; ; i++) {
+      if (!messageClient.isConnected()) {
+        this.logger.info("Try connection attempt " + i);
+        try {
+          Thread.sleep(7000);
+          messageClient.connect();
+          messageClient.setMessageCallback();
+          messageClient.subscribe();
+        } catch (Exception e) {
+          this.logger.severe(e.toString());
         }
+      } else {
+        this.logger.info("Connected on retry " + i);
+        break;
+      }
     }
+  }
 
 }
