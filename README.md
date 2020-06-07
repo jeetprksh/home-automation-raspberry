@@ -1,1 +1,1 @@
-# light-automation-raspberry
+# home-automation-raspberry

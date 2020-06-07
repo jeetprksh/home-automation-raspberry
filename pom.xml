@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.jeetprksh.iot.raspberry</groupId>
-  <artifactId>light-automation-raspberry</artifactId>
+  <artifactId>home-automation-raspberry</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>light-automation-raspberry</name>
+  <name>home-automation-raspberry</name>
   <url>http://maven.apache.org</url>
 
   <properties>
